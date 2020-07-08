@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>46-47-对象的简介</title>
+    <script type="text/javascript">
+        //创建对象
+        /*
+        * 使用new关键字调用的函数,是构造函数constructor
+        *   构造函数时专门用来创建对象的函数
+        * 使用typeof检查一个对象时,会返回object
+        * */
+        var obj = new Object();
+        //console.log(obj);
+        /*
+        * 在对象中保存的值称为属性
+        * 向对象中添加属性
+        *   语法:对象.属性名 = 属性值*/
+        obj.name = "狗";
+        obj.gender = "男";
+        obj.age = "18";
+        /*
+        * 读取对象中的属性
+        *   语法:对象.属性名
+        * */
+        obj.name = "书悟空";
+        /*
+        * 删除对象
+        * 语法:delete 对象.属性名*/
+        delete obj.age;
+        console.log(obj.name);
+        console.log(obj);
+    </script>
+</head>
+<body>
+
+
+
+
+
+
+</body>
+</html>

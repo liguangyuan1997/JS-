@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>74-数组练习</title>
+    <script>
+        function Person(name,age){
+            this.naem=name;
+            this.age=age;
+        }
+        var per = new Person("sunwukong",20);
+        var per2 = new Person("猪八戒",28);
+        var per3 = new Person("沙和尚",2);
+        var per4 = new Person("红海微软",19);
+        var arr = [per,per2,per3,per4];
+        function getAdult(arr){
+            var newArr = new Array();
+            for (var i = 0;i < arr.length; i++){
+                if(arr[i].age > 18){
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var result = getAdult(arr);
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

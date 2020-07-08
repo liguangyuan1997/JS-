@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-强制类型转换</title>
+    <script>
+        /*
+        * 强制类型转换*/
+        /*
+        * 将其他的数据类型转换为string
+        *   方式一:
+        *       - 调用被转换数据类型的tostring()方法
+        *       - 该方法不会影响到原变量,他会将转换的结果返回
+        *       - 但是注意: nullhe undefined这两个值没有tostring()方法
+        *                   调用会报错
+        *   方式二:
+        *       - 调用string函数,并将被转换的数据作为参数传递给函数
+        *       - 使用String函数做强制类型转换时,
+        *               对于number和boolean实际上就是调用tostring()方法
+        *               但是对于null和undefined是直接将其转换为文字*/
+        var a = 123;
+        var b = a.toString();
+        // a = a.toString();
+        a = String(a);
+        console.log(typeof a);
+        console.log(a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

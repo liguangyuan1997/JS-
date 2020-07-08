@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48-属性名和属性值</title>
+    <script type="text/javascript">
+
+        var obj = new Object();
+        //obj.name = "gou";
+        /*
+        * 属性名:
+        *       - 对象的属性名不强制要求使用标识符规范*/
+        obj.var = "hello";
+        /*
+        * 如果要使用特殊的属性名,不能采用.的方式来操作
+        *   需要使用另一种方式
+        *       语法:对象["属性名"] = 属性值
+        * 使用[]这种形式去操作属性,更加的灵活,
+        *   在[]中可以直接传递一个变量,这样变量值时多少就会读取那个属性
+        * */
+        obj["123"] = 456;
+        //console.log(obj["123"]);
+        var gou = "123";
+        console.log(obj[gou]);
+        /*
+        * in运算符
+        *   通过该运算符可以检查一个对象中是否含有指定的属性
+        *       如果有则返回true,没有则返回false
+        *   语法:
+        *       "属性名" in 对象*/
+        console.log("gou" in obj);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

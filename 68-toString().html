@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>68-toString</title>
+    <script>
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        Person.prototype.toString=function () {
+            return("Person[name="+this.name+"age"+this.age+"+this.gender+"+this.gender);
+        }
+        var gou = new Person("gou",1,"nan");
+        console.log(gou);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
