@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>59-函数作用域</title>
+		<script>
+			/* 
+			 函数作用域
+				- 调用函数时创建函数作用域,函数执行完毕后,函数作用域销毁
+				在函数中要使用全局变量就用windows.变量*/
+			var a = "window中的全局变量";
+			 function fun(){
+				 var a = "fun函数中的变量";
+				 console.log(window.a);
+			 }
+			 fun();
+			 /* 
+			 在函数作用域中也有声明提前的特性
+				使用var关键字生命的变量,会在函数中所有的代码执行之前被声明
+				函数声明也会在函数中所有的代码执行之前执行
+			在函数作用域中如果不使用var来声明变量,则该变量将会成为全局变量相当于window*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

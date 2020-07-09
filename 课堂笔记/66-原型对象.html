@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>66-原型对象</title>
+    <script>
+        /*
+        * 原型:prototype
+        *
+        *   每一个函数解析器都会向其中添加一个属性prototype
+        *       属性对应着一个对象,这个对象就是我们所谓的原型对象
+        *   如果函数作为普通函数调用prototype没有任何作用
+        *   当函数以构造函数的形式调用时,他所创建的对象都会有一个隐含的属性,
+        *        指向该构造函数的原型对象,我们可以通过__proto__来访问该属性
+        *
+        *   原型对象就相当于一个公共的区域,所有同一个类的实例都可以访问到这个原型对象
+        *       我们可以将对象中共有的内容,统一设置到原型对象中*/
+        function Person(name,age) {
+            this.name = name;
+            this.age = age;
+            //this.sayName=sayName;
+        }
+        Person.prototype.sayName=function(){//这样就不会污染全局作用域,并且函数还不会被重复调用
+            alert(this.name);
+        };
+        function sayName(){
+            alert(this.name);
+        }
+        var me = new Person("liguangyuan",23);
+        me.sayName();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
